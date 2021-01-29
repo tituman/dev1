@@ -6,6 +6,6 @@ function JavaScriptFetch() {
     document.querySelector('head').appendChild(script);
 }
   
-function processJSONPResponse(data) {
-    alert(data);
+function jsonCallback(data) {
+    alert(data[3].domains.length);
 }

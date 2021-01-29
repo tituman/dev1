@@ -13,7 +13,7 @@ function fetchData() {
         jQuery.ajax({
 			url: rootUrl.substr(0, rootUrl.lastIndexOf('/') + 1) + "dataExt.json",
 			dataType: "jsonp", // jsonp
-			type: 'POST',
+			type: 'GET',
 			dataType: "jsonp",
 			contentType: "application/json",
 			success: function (result, status, xhr) {
@@ -27,5 +27,5 @@ function fetchData() {
 }
  
 function jsonCallback(json){
-    alert(json);
+    alert(json[0].iter );
 }
