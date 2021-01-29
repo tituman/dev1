@@ -27,5 +27,5 @@ function fetchData() {
 }
  
 function jsonCallback(json){
-    alert("In jsonCallback! Got " + json.field1 + ", " + json.field2 + ", " + json.field3);
+    alert(json);
 }
