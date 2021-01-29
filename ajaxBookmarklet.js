@@ -11,11 +11,18 @@ else {
 function fetchData() {
         var rootUrl = jQuery('#ajaxBookmarklet').attr('src');
         jQuery.ajax({
-          url: rootUrl.substr(0, rootUrl.lastIndexOf('/') + 1) + "dataExt.js",
-          type: 'get',
-          dataType: "jsonp",
-          contentType: "application/json",
-          jsonpCallback: "jsonCallback"
+			url: rootUrl.substr(0, rootUrl.lastIndexOf('/') + 1) + "dataExt.json",
+			dataType: "jsonp", // jsonp
+			type: 'POST',
+			dataType: "jsonp",
+			contentType: "application/json",
+			success: function (result, status, xhr) {
+				console.log(result);
+			},
+			error: function (xhr, status, error) {
+				console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+			}
+			jsonpCallback: "jsonCallback"
   });
 }
  
