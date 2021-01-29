@@ -48,7 +48,7 @@ jsonCallback([{
         "addOnes": false
     }, {
         "domains": ["thalia"],
-        "iter": 0,
+        "iter": 1,
         "addOnes": false
     }, {
         "domains": ["amazon"],
