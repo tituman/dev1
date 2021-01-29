@@ -21,7 +21,7 @@ function fetchData() {
 			},
 			error: function (xhr, status, error) {
 				console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-			}
+			},
 			jsonpCallback: "jsonCallback"
   });
 }
